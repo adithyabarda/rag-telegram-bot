@@ -24,7 +24,7 @@ async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = " ".join(context.args)
 
     if not query:
-        await update.message.reply_text("❗ Provide a question.")
+        await update.message.reply_text(" Provide a question.")
         return
 
     msg = await update.message.reply_text("⏳ Generating...")
@@ -38,7 +38,7 @@ async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         retrieved_data = retrieve(query)
 
-        # 🔥 STREAMING
+        # STREAMING
         last_text = ""
 
         for partial in stream_answer(query, retrieved_data, history_text):
@@ -114,7 +114,7 @@ def main():
     app.add_handler(CommandHandler("summarize", summarize))
     app.add_handler(CommandHandler("help", help_command))
 
-    print("🚀 Advanced RAG Bot running...")
+    print(" Advanced RAG Bot running...")
     app.run_polling(drop_pending_updates=True)
 
 if __name__ == "__main__":

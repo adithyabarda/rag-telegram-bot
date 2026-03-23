@@ -54,7 +54,7 @@ Final Answer + Source
 ## Project Structure
 
 ```
-project/
+rag_bot/
 │
 ├── app.py
 ├── rag.py
@@ -76,16 +76,16 @@ project/
 ### 1️⃣ Clone the repository
 
 git clone https://github.com/adithyabarda/rag-telegram-bot
----
-cd project-folder
+
+cd project_folder_name
 
 ---
 
 ### 2️⃣ Create virtual environment
 
 python -m venv myenv
----
-myenv\Scripts\activate # Windows
+
+myenv\Scripts\activate 
 
 ---
 
@@ -105,7 +105,7 @@ ollama run phi3
 
 ---
 
-### 5 Run the bot
+### 5️⃣ Run the bot
 
 python app.py
 
@@ -156,7 +156,7 @@ python app.py
 ## Example
 
 /ask What is RAG?
-→ Answer + 📄 Source: rag.txt
+→ Answer + 📄 Source: file.txt
 
 /ask Who is Sachin?
 → I don’t know.

@@ -76,6 +76,7 @@ project/
 ### 1️⃣ Clone the repository
 
 git clone https://github.com/adithyabarda/rag-telegram-bot
+---
 cd project-folder
 
 ---
@@ -83,6 +84,7 @@ cd project-folder
 ### 2️⃣ Create virtual environment
 
 python -m venv myenv
+---
 myenv\Scripts\activate # Windows
 
 ---

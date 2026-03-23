@@ -75,8 +75,8 @@ project/
 
 ### 1️⃣ Clone the repository
 
-git clone <your-repo-link>
-cd project
+git clone https://github.com/adithyabarda/rag-telegram-bot
+cd project-folder
 
 ---
 

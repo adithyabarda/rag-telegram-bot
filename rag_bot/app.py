@@ -50,11 +50,10 @@ async def ask(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 except:
                     pass
 
-        # Save final
         user_history[user_id].append(f"Q: {query}\nA: {last_text}")
 
     except Exception as e:
-        await msg.edit_text(f"❌ Error: {str(e)}")
+        await msg.edit_text(f" Error: {str(e)}")
 
 # =========================
 # /summarize COMMAND
@@ -63,7 +62,7 @@ async def summarize(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
 
     if user_id not in user_history or not user_history[user_id]:
-        await update.message.reply_text("❌ No conversation to summarize.")
+        await update.message.reply_text(" No conversation to summarize.")
         return
 
     last_chat = "\n".join(user_history[user_id][-3:])

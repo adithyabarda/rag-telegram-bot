@@ -89,7 +89,6 @@ def stream_answer(query, retrieved_data, history=""):
 
     context = " ".join(docs)
 
-    # 🔥 OPTIONAL: basic relevance check (very useful)
     if len(context.strip()) < 50:
         yield "I don't know."
         return
@@ -141,11 +140,9 @@ Answer:
 
     clean_answer = full_answer.strip().lower()
 
-    # 🔥 IMPORTANT: do NOT show source for fallback answers
     if "i don't know" in clean_answer or "not sure" in clean_answer:
         yield full_answer.strip()
         return
 
-    # ✅ show sources only if valid answer
     unique_sources = list(set(sources))
     yield f"{full_answer.strip()}\n\n📄 Source: {', '.join(unique_sources)}"

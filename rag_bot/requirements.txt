@@ -1,7 +1,7 @@
-chromadb==1.5.5
-python-telegram-bot==22.7
-requests==2.32.5
-sentence-transformers==5.3.0
+chromadb
+python-telegram-bot
+requests
+sentence-transformers
 python-dotenv
 langchain
 langchain-text-splitters

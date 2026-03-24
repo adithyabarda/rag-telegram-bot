@@ -72,7 +72,7 @@ async def summarize(update: Update, context: ContextTypes.DEFAULT_TYPE):
     res = requests.post(
         "http://localhost:11434/api/generate",
         json={
-            "model": "llama3",
+            "model": "phi3:latest",
             "prompt": prompt,
             "stream": False
         }
